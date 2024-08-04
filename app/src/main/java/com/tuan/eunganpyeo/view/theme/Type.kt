@@ -1,4 +1,4 @@
-package com.tuan.eunganpyeo.ui.theme
+package com.tuan.eunganpyeo.view.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
