@@ -8,15 +8,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.tuan.eunganpyeo.view.navigation.BottomNavigation
 import com.tuan.eunganpyeo.view.navigation.NavigationGraph
 import com.tuan.eunganpyeo.view.theme.NoRippleTheme
 
-@Preview
 @Composable
-fun MainView(){
+fun MainView(naviController: NavHostController){
 
     val navController = rememberNavController()
 
@@ -33,7 +32,7 @@ fun MainView(){
         }
     ) {
         Box(Modifier.padding(it)){
-            NavigationGraph(navController = navController)
+            NavigationGraph(navController = navController, naviController = naviController)
         }
     }
 }

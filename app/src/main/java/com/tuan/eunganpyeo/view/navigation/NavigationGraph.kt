@@ -9,7 +9,7 @@ import com.tuan.eunganpyeo.view.InformationView
 import com.tuan.eunganpyeo.view.SettingView
 
 @Composable
-fun NavigationGraph(navController: NavHostController) {
+fun NavigationGraph(navController: NavHostController, naviController: NavHostController) {
     NavHost(navController = navController, startDestination = BottomNavItem.CountScreen.screenRoute) {
         composable(BottomNavItem.CountScreen.screenRoute) {
             CountView()
@@ -18,7 +18,7 @@ fun NavigationGraph(navController: NavHostController) {
             InformationView()
         }
         composable(BottomNavItem.SettingScreen.screenRoute) {
-            SettingView()
+            SettingView(naviController)
         }
     }
 }
